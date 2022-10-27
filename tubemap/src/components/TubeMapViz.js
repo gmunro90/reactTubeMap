@@ -1,5 +1,5 @@
- /* eslint-disable */
- const TubeMapViz = (function(){
+/* eslint-disable */
+const TubeMapViz = (function(){
   var Events = function(canvas, context){
       this.canvas = canvas;
       this.context = context;
@@ -1251,7 +1251,7 @@
       value: function(x, y){
         var h = x, v = y;
         var cellWidth = this.cellWidth, cellHeight = this.cellHeight;
-        x=x*cellWidth, y=y*cellHeight;
+        x = x*cellWidth, y=y*cellHeight;
         if(!this.grid[h]){
           this.grid[h] = {};
         }
@@ -1477,7 +1477,7 @@
               else if (this.stations[stations[i].name].gridLoc.center.y == this.stations[stations[i+1].name].gridLoc.center.y) {
                 //the line runs horizontally
                 directionOfLine = "h";
-                hBelow = (this.stations[stations[i].name].hBelowLinesDrawn <=  this.stations[stations[i].name].hAboveLinesDrawn) == true ? 1 : -1;
+                var hBelow = (this.stations[stations[i].name].hBelowLinesDrawn <=  this.stations[stations[i].name].hAboveLinesDrawn) == true ? 1 : -1;
                 if(this.stations[stations[i].name].hLinesDrawn > 0 && this.stations[stations[i+1].name].hLinesDrawn > 0){
                   if(hBelow==1){
                     adjustmentY = (this.lineSpacing * hBelow) + (this.lineSpacing * this.stations[stations[i].name].hBelowLinesDrawn * hBelow);
